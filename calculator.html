@@ -90,7 +90,7 @@
         <script>  
         var firstnumber;  
         var secondnumber;  
-        var result;  
+        var result=1;  
         var operations;  
   
         function numone() {  
@@ -322,14 +322,15 @@
   
                 for (var i = 0; i < secondnumber; i++) {  
   
-                    result = firstnumber * i;  
+                    result = firstnumber * result;  
                 }  
   
   
             }  
             document.lcdform.lcds.value = "";  
             document.lcdform.lcds.value = result.toString();  
-            document.lcdform.lcdsu.value = firstnumber + operation + secondnumber + " = " + result.toString();  
+            document.lcdform.lcdsu.value = firstnumber + operation + secondnumber + " = " + result.toString();
+            result=1;
             return;  
   
         }  
