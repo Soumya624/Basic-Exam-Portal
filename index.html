@@ -601,6 +601,8 @@
         <div class="submission" id="submissions">
           <!-- <button class='qll' type='button' id='ql' > ☰ </button> -->
         </div>
+        <br />
+        <br />
         <div class="candidates" id="qllll">
           <div class="c1">
             <div class="t1">
@@ -885,30 +887,31 @@
           randoms +=
             "<button id='pr2'onclick='myFunctionnext(" +
             i +
-            ")' type='button' style='float: right; width: 100px; font-size: 10px; border-radius: 5px;margin-left: 0.5%;' >Next Question</button>";
+            ")' type='button' style='float: right; width: 100px; font-size: 10px; border-radius: 5px; margin: 0.5%;' >Next Question</button>";
         }
         if (i > 0) {
           randoms1 +=
             "<button id='pr4'onclick='myFunctionprv(" +
             i +
-            ")' type='button' style='float: left; width: 100px;font-size: 10px; border-radius: 5px;margin-left: 0.5%;'>Previous Question</button>";
+            ")' type='button' style='float: left; width: 100px;font-size: 10px; border-radius: 5px;margin: 0.5%;'>Previous Question</button>";
         }
         randoms2 +=
           "<button id='pr'onclick='myFunctionclear(" +
           i +
-          ")' type='button' style='float: left; width: 100px; font-size: 10px;border-radius: 5px;'>Clear Response</button>";
+          ")' type='button' style='float: left; width: 100px; font-size: 10px;border-radius: 5px; margin: 0.5%;'>Clear Response</button>";
         randoms3 +=
           "<button id='pr1'onclick='myFunctionref(" +
           i +
-          ")' type='button' style='float: right; width: 100px;font-size: 10px;  border-radius: 5px;'>Reference & Next</button>";
+          ")' type='button' style='float: right; width: 100px;font-size: 10px;  border-radius: 5px; margin: 0.5%;'>Reference & Next</button>";
         randoms4 +=
           "<button id='pr3'onclick='myFunctionclearref(" +
           i +
-          ")' type='button' style='width: 100px; font-size: 10px;border-radius: 5px;margin-left: 0.5%;'>Clear Reference</button>";
+          ")' type='button' style='width: 100px; font-size: 10px;border-radius: 5px;margin: 0.5%;'>Clear Reference</button>";
         // randoms5 +=
         //   "<button type='button' style=' width: 100px;font-size: 10px; border-radius: 5px;margin-left: 0.5%;'>Submit</button>";
+        document.getElementById("submissions").style = "padding:1% !important";
         document.getElementById("submissions").innerHTML =
-          randoms + randoms1 + randoms3 + randoms4 + randoms2;
+          randoms + randoms1 + randoms3 + randoms4 + randoms2 + "<br>";
         if (t[i]["question_type"] == "MCQ") {
           img = '<img src="/static/images/' + t[i]["imgfilename"] + '">';
           //if (document.getElementById("answer").innerHTML != "") { document.getElementById("answer").innerHTML = ""; }
